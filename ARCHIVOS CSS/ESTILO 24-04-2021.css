@@ -536,7 +536,12 @@
         width: 50%;
         max-width: 900px;
       }
-      
+
+      .ImagenInicio {
+        width: 90%;
+        max-width: 900px;
+      }
+
        .Tuto-text p{
         font-size: 13px;
         margin: 10px;
