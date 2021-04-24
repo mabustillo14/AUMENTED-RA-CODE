@@ -1,0 +1,621 @@
+      /* width */
+      ::-webkit-scrollbar {
+        width: 20px;
+      }
+
+      /* Track */
+      ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px grey;
+        border-radius: 10px;
+      }
+
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: #FFC300 ;
+        border-radius: 10px;
+      }
+
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #ecbd40;
+      }
+   
+      
+/*DISEÑO DEL MENU DESPLEGABLE*/
+      body {
+        margin: 0;
+        font-family: Arial;
+      }
+
+      .topnav {
+        overflow: hidden;
+        background-color: #333;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+      }
+
+      .active {
+        background-color: #EC7155;
+        color: white;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        font-size: 17px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        max-height: 300px;
+        overflow: auto;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .topnav a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: #555;
+        color: white;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      @media screen and (max-width: 1300px) {
+        .topnav a:not(:first-child),
+        .dropdown .dropbtn {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+      }
+
+      @media screen and (max-width: 1300px) {
+        .topnav.responsive {
+          position: relative;
+          width: 100%;
+        }
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .topnav.responsive .dropdown {
+          float: none;
+        }
+        .topnav.responsive .dropdown-content {
+          position: relative;
+          height: auto;
+        }
+        .topnav.responsive .dropdown .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+        }
+
+        .btn {
+          background-color: DodgerBlue;
+          border: none;
+          color: white;
+          padding: 12px 30px;
+          cursor: pointer;
+          font-size: 20px;
+        }
+
+        /* Darker background on mouse-over */
+        .btn:hover {
+          background-color: RoyalBlue;
+        }
+      }
+
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*PARA TENER COLUMNAS EN LOS MENU*/
+      /* Create three equal columns that floats next to each other */
+      .column {
+        float: left;
+        padding: 10px;
+        background-color: white;
+        height: auto;
+      }
+
+      .column a {
+        float: none;
+        color: black;
+        padding: 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .column a:hover {
+        background-color: #ddd;
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      .tittle {
+        font-size: 19px;
+      }
+      @media screen and (max-width: 1300px) {
+        .column {
+          width: 100%;
+          height: auto;
+        }
+        .row {
+          overflow-x: hidden;
+        }
+        .tittle {
+          font-size: 17px;
+        }
+        .scroll {
+            overflow: auto;
+       
+        max-height: 4
+        00px;
+        }
+      }
+ 
+
+
+    
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*DISEÑO BOTON DE INFORMACIÓN*/
+      .btnInfo {
+      background-color: #FF5733  ; 
+      color: white;
+      float: left; 
+      border: 3px solid  #C83D17;  
+      outline: none; 
+      cursor: pointer; 
+      padding: 14px 16px; 
+      transition: 0.3s;  
+      font-size: 17px;
+      }
+      
+
+    .btnInfo:hover {
+    background-color: #C83D17 ;
+    color: white;
+    border: 5px solid #631702 ;
+}
+      
+      
+      
+      
+      .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0); /* Fallback color */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+      }
+
+      /* Modal Content */
+      .modal-content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 0;
+        border: 5px solid #888;
+        width: 80%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+          0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s;
+      }
+
+      /* Add Animation */
+      @-webkit-keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+
+      @keyframes animatetop {
+        from {
+          top: -300px;
+          opacity: 0;
+        }
+        to {
+          top: 0;
+          opacity: 1;
+        }
+      }
+
+      /* The Close Button */
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .modal-header {
+        padding: 2px 16px;
+        background-color: #A63898;
+        color: white;
+      }
+
+      .modal-body {
+        padding: 2px 16px;
+      }
+
+      .modal-footer {
+        padding: 2px 16px;
+        background-color: #A63898;
+        color: white;
+      }
+
+      @media all and (max-width: 1300px) {
+        div {
+          font-size: 13px;
+        }
+      }
+    
+
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------*/
+/*BOTON DE PANTALLA DE INICIO*/
+/*INCLUIR BOTON DE INFORMACION EN LA PANTALLA*/
+
+    <style>
+      .image {
+        width: 80%;
+        max-width: 900px;
+      }
+
+      .TextOverlay {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;
+        opacity: 100%;
+      }
+
+      .TextOverlay-content {
+        position: relative;
+        top: 20%;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .TextOverlay p {
+        padding: 0px 20px;
+        text-decoration: none;
+        font-size: 32px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      .creditos {
+        padding: 20px;
+      }
+      .creditos p {
+        padding: 0px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        margin: 5px;
+      }
+
+      .TextOverlay a {
+        padding: 8px;
+        text-decoration: none;
+        font-size: 36px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .TextOverlay a:hover,
+      .TextOverlay a:focus {
+        color: #f1f1f1;
+      }
+
+      .TextOverlay .closebtn {
+        position: absolute;
+        top: 20px;
+        right: 45px;
+        font-size: 60px;
+      }
+
+      @media screen and (max-height: 1300px) {
+        .TextOverlay {
+          overflow-y: auto;
+        }
+        .TextOverlay a {
+          font-size: 20px;
+        }
+        .TextOverlay .closebtn {
+          font-size: 40px;
+          top: 15px;
+          right: 35px;
+        }
+      }
+
+      @media all and (max-width: 1300px) {
+        .TextOverlay p {
+          font-size: 20px;
+        }
+        .image {
+          width: 90%;
+          max-width: 900px;
+        }
+
+        .creditos p {
+          font-size: 15px;
+        }
+      }
+    
+    
+    
+    
+    
+    
+    /*--------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------*/
+    /*FORMATO BOTONES PARA ESCALAR MODELO 3D*/
+    .BotonEscala {
+      font-size: 20px;  
+      padding: 12px 24px; 
+      background-color: #B1D176;
+      align-items: center; 
+      border: 4px solid #91C433; 
+      vertical-align: middle; 
+      text-align: center; 
+      transition: 0.3s;
+      cursor: pointer;  
+      border-radius: 50px;
+      width: 100%;
+      }
+      
+          .ContenedorEscala div{
+      margin: 4px 2px; 
+      }
+     .BotonEscala:hover {
+    background-color: #7CA72E ;
+    border: 4px solid #576F2B;
+    }
+      
+    .ContenedorEscala {
+       width: 25px;
+      position: fixed; 
+      right: 15px; 
+      top: 50%;  
+      width: auto; 
+      text-align: center; 
+      z-index: 23; 
+      align-items: center; 
+      }
+      
+      /*ocultar cuando es menor a 650px, tamaño promedio ancho celular*/
+      @media all and (max-width: 650px) {
+        .ContenedorEscala {
+          visibility: hidden;
+        }
+        .BotonEscala {
+        visibility: hidden;
+        }
+      }
+    
+    
+    /*--------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------*/
+    /*--------------------------------------------------------------------------------*/
+    /*FORMATO BOTON DE PREGUNTA Y TUTORIALES*/
+      .BtnPregunta {
+      background-color: #FF5733; 
+      border: 5px solid #C83D17; 
+      color: white; 
+      padding: 10px; 
+      text-align: center; 
+      text-decoration: none;
+      display: inline-block; 
+      margin: 4px 2px; 
+      border-radius: 50px; 
+      font-size: 30px; 
+      cursor: pointer;
+        transition: 0.3s;
+           outline: none;  
+      
+      } 
+
+    .BtnPregunta:hover {
+    background-color: #C83D17 ;
+    color: white;
+    border: 5px solid #631702 ;
+    }
+      
+      .BotonTutorial {
+        border-radius: 5px;
+      font-size: 20px;  
+      padding: 12px 15px; 
+      background-color: #B7E85E; 
+      align-items:center; 
+      border: 4px solid #81A147; 
+      vertical-align: middle; 
+      text-align: center; 
+      cursor: pointer; 
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+      
+      .BotonTutorial:hover {
+        background-color: #7CA72E; 
+        border: 4px solid #576F2B; 
+     } 
+      .imageTuto {
+        width: 50%;
+        max-width: 900px;
+      }
+      
+       .Tuto-text p{
+        font-size: 13px;
+        margin: 10px;
+        font-size: 20px;
+        padding: 0px 20px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;  
+      }
+      
+       .Tuto-text {
+          margin-bottom: 0px;
+      }
+      
+      .titulo{
+        font-size: 15px;
+        margin-top: 10px;
+      }
+      
+      .TextOverlay-Tuto {
+        height: 0%;
+        width: 100%;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-y: hidden;
+        transition: 0.5s;
+        opacity: 100%;
+      }
+
+      .TextOverlay-content-Tuto {
+        position: relative;
+        top: 20%;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .creditos-Tuto {
+        margin-top: 0px;
+        padding: 20px;
+      }
+      .creditos-Tuto p {
+        padding: 0px 20px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+        margin: 5px;
+      }
+
+      .TextOverlay-Tuto a {
+        padding: 8px;
+        text-decoration: none;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .TextOverlay-Tuto a:hover,
+      .TextOverlay-Tuto a:focus {
+        color: #f1f1f1;
+      } 
+      
+      
+      @media all and (max-width: 650px) {
+        .BotonTutorial {
+          font-size: 14px;
+          padding: 6px 12px;
+        }
+        .imageTuto {
+          width: 90%;
+          max-width: 900px;
+          margin: 0px;
+        }
+      }
+    
