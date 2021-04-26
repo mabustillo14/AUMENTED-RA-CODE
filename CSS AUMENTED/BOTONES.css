@@ -393,4 +393,22 @@ border: 5px solid #631702 ;
       max-width: 900px;
       margin: 0px;
     }
+    
+      .BotonTutorial {
+    border-radius: 5px;
+  font-size: 20px;  
+  padding: 12px 15px; 
+  background-color: #B7E85E; 
+  align-items:center; 
+  border: 2px solid #81A147; 
+  vertical-align: middle; 
+  text-align: center; 
+  cursor: pointer; 
+  margin-left: 0px;
+  margin-right: 0px;
+}
+  
+  .BotonTutorial:hover {
+    background-color: #7CA72E; 
+    border: 2px solid #576F2B; 
   }
