@@ -101,7 +101,7 @@ border: 5px solid #631702 ;
     color: white;
   }
 
-  @media all and (max-width: 1300px) {
+  @media all and (max-width: 650px) {
     div {
       font-size: 13px;
     }
@@ -196,7 +196,7 @@ border: 5px solid #631702 ;
     }
   }
 
-  @media all and (max-width: 1300px) {
+  @media all and (max-width: 650px) {
     .TextOverlay p {
       font-size: 20px;
     }
